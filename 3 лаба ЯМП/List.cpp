@@ -147,9 +147,9 @@ void sort(Tlist head, int type)
 	Tlist j = i;
 
 
-	while (i->next->next != nullptr)
+	while (i->next != nullptr)
 	{
-		j = i;
+		j = i->next;
 
 		while (j != nullptr)
 		{
@@ -176,7 +176,7 @@ void sort(Tlist head, int type)
 		i = i->next;
 	}
 
-	if ((i->next->next == nullptr) && (compareList(i, i->next, type) >= 0)) swapList(i, i->next);
+	//if ((i->next->next == nullptr) && (compareList(i, i->next, type) >= 0)) swapList(i, i->next);
 }
 
 

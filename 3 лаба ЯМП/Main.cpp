@@ -48,6 +48,7 @@ int main()
 			}
 		}
 
+		file.close();
 
 		do
 		{
@@ -93,8 +94,6 @@ int main()
 			}
 		} while (choseMenu != 4);
 	}
-
-	file.close();
 
 	return 0;
 }
@@ -146,7 +145,7 @@ std::string MyTask(Tlist head, std::string destination)
 	sort(head, 1);
 
 	Tlist p = head, k = head;
-	std::string result = "Ничего хорошего!";
+	std::string result;
 
 	bool findDestination = false;
 	int countresult = 0, countmax = 0;
